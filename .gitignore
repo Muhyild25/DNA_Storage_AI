@@ -16,3 +16,16 @@ Release/
 *.pdb
 *.idb
 *.ilk
+
+# Python & Sanal Ortam (Virtual Environment)
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# C++ - Python Köprü Derleme Çıktıları
+build/
+dist/
+*.egg-info/
+*.pyd
+*.whl
