@@ -1,0 +1,18 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.db
+*.opendb
+*.VC.db
+
+# Derleme Çıktıları (Build Files)
+x64/
+x86/
+Debug/
+Release/
+*.exe
+*.obj
+*.pdb
+*.idb
+*.ilk
