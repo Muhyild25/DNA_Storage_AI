@@ -29,3 +29,8 @@ dist/
 *.egg-info/
 *.pyd
 *.whl
+
+
+# Yapay Zeka Veri Setleri ve Modelleri
+*.json
+*.pth
