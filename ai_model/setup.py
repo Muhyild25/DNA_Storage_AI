@@ -1,37 +1,33 @@
-"""
-=============================================================================
-DNA Storage AI - pybind11 Setup Configuration
-=============================================================================
-Bu kurulum dosyası, C++ çekirdek motorunu (DnaCore.cpp) Visual Studio
-derleyicisi aracılığıyla derleyerek Python sanal ortamına entegre eder.
-
-Kullanım: pip install . --no-build-isolation
-=============================================================================
-"""
-
 from setuptools import setup, Extension
 import pybind11
+import os
 
-# Derlenecek C++ modülünün kaynak ve başlık (header) yolları
-ext_modules = [
-    Extension(
-        'dnacore',
-        sources=[
-            'wrapper.cpp',
-            '../core_cpp/DnaCoreEngine/DnaCoreEngine/DnaCore.cpp' 
-        ],
-        include_dirs=[
-            pybind11.get_include(),
-            '../core_cpp/DnaCoreEngine/DnaCoreEngine' 
-        ],
-        language='c++'
-    ),
-]
+# Bulunduğumuz dizin ve ONNX dizini
+current_dir = os.path.dirname(os.path.abspath(__file__))
+onnx_dir = os.path.join(current_dir, "onnxruntime")
 
-# Modülün paketlenme ayarları
+# C++ Çekirdek dizinimizin tam yolunu (bir üst klasöre çıkarak) belirliyoruz
+core_cpp_dir = os.path.abspath(os.path.join(current_dir, "..", "core_cpp", "DnaCoreEngine", "DnaCoreEngine"))
+
+cpp_module = Extension(
+    'dnacore',
+    # Derleyiciye DnaCore.cpp dosyasının orijinal yerini gösteriyoruz
+    sources=['wrapper.cpp', os.path.join(core_cpp_dir, 'DnaCore.cpp')],
+    include_dirs=[
+        pybind11.get_include(),
+        os.path.join(onnx_dir, "include"),
+        core_cpp_dir  # DnaCore.h dosyasının nerede olduğunu söylüyoruz
+    ],
+    library_dirs=[
+        os.path.join(onnx_dir, "lib")
+    ],
+    libraries=['onnxruntime'],
+    language='c++',
+    extra_compile_args=['/std:c++17', '/O2']
+)
+
 setup(
     name='dnacore',
     version='1.0',
-    description='DNA Storage C++ Core Engine for Python',
-    ext_modules=ext_modules,
+    ext_modules=[cpp_module],
 )
