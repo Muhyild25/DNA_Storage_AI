@@ -2,7 +2,7 @@
 
 **Yüksek Performanslı C++ Motoru ve ONNX Yapay Zeka Destekli Biyolojik Veri Depolama Sistemi**
 
-Bu proje, artan küresel veri hacmine karşılık doğanın en kusursuz bilgi saklama molekülü olan DNA'yı kullanarak dijital verileri moleküler düzeyde kodlamak, analiz etmek ve geri kazanmak amacıyla geliştirilmiş otonom bir altyapıdır. Proje, **TÜBİTAK 2209 Araştırma Programı** ve **Teknofest** hedefleri doğrultusunda Eskişehir Osmangazi Üniversitesi bünyesinde hayata geçirilmiştir.
+Bu proje, artan küresel veri hacmine karşılık doğanın en kusursuz bilgi saklama molekülü olan DNA'yı kullanarak dijital verileri moleküler düzeyde kodlamak, analiz etmek ve geri kazanmak amacıyla geliştirilmiş otonom bir altyapıdır. Başlangıçta bir akademik araştırma inisiyatifi olarak tasarlanan bu sistem; şu an saf C++ ve yapay zeka teknolojilerini harmanlayan yüksek performanslı, bağımsız ve açık kaynaklı bir mühendislik projesi olarak geliştirilmeye devam etmektedir.
 
 ---
 
