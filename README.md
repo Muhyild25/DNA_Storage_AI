@@ -18,7 +18,7 @@ Geleneksel Python tabanlı yavaş veri işleme yöntemleri yerine, bu projede sa
 Geliştirilen hibrit mimari, devasa veri yığınları altında olağanüstü bir performans sergilemektedir:
 *   **12.648 Bazlık DNA Sentezi (C++):** 0.0001 saniye
 *   **Yapay Zeka Risk Analizi (ONNX):** 0.0166 saniye
-*   (Test donanım limitleri dahilinde dinamik esneme kabiliyeti kanıtlanmıştır.)
+*   *(Test donanım limitleri dahilinde dinamik esneme kabiliyeti kanıtlanmıştır.)*
 
 ---
 
@@ -34,6 +34,7 @@ Geliştirilen hibrit mimari, devasa veri yığınları altında olağanüstü bi
 
 Projeyi kendi bilgisayarınızda veya sunucunuzda çalıştırmak için aşağıdaki komutları sırasıyla terminalinize yapıştırabilirsiniz:
 
+```bash
 git clone https://github.com/Muhyild25/DNA_Storage_AI.git
 cd DNA_Storage_AI
 pip install -r ai_model/requirements.txt
@@ -41,7 +42,5 @@ cd ai_model
 python setup.py build_ext --inplace
 streamlit run app.py
 
----
-
-## 👨‍💻 Geliştirici
-**Muhammed** - Eskişehir Osmangazi Üniversitesi, Bilgisayar Mühendisliği
+👨‍💻 Geliştirici
+Muhammed Yıldırım - Eskişehir Osmangazi Üniversitesi, Bilgisayar Mühendisliği
